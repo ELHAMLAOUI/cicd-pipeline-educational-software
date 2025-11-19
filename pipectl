@@ -1,0 +1,3 @@
+#!/bin/sh
+# Pilote du simulateur de pipeline CI/CD (voir README.md)
+exec python3 "$(dirname "$0")/engine/pipectl.py" "$@"

@@ -1,0 +1,11 @@
+# Pipeline CI/CD de la boutique.
+# Chaque commit déclenche ces étapes, dans l'ordre. Si une étape échoue,
+# les suivantes sont ignorées.
+name: boutique
+stages:
+  - name: build
+    run: python -m compileall -q src
+  - name: test
+    run: python -m unittest discover -s tests -v
+  - name: deploy-staging
+    deploy: staging

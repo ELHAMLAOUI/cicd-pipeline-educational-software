@@ -1,0 +1,12 @@
+# Pipeline CI/CD de la boutique : staging puis production.
+# Chaque déploiement est suivi d'un contrôle de santé (healthcheck.py).
+name: boutique
+stages:
+  - name: build
+    run: python -m compileall -q src
+  - name: test
+    run: python -m unittest discover -s tests -v
+  - name: deploy-staging
+    deploy: staging
+  - name: deploy-production
+    deploy: production

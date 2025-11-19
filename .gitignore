@@ -1,0 +1,7 @@
+workspace/
+results/*.json
+results/rapport.csv
+rendu-*.zip
+notes-*/
+__pycache__/
+/solutions/

@@ -1,0 +1,18 @@
+# Tests de bout en bout du simulateur : départ = 0, solutions = 20/20, rendu, erreurs détectées.
+name: Tests du didacticiel
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.8", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "${{ matrix.python }}" }
+      - run: pip install -r requirements.txt pyflakes
+      - run: python -m pyflakes engine labs
+      - run: shellcheck -S warning pipectl tests/run-tests.sh
+      - run: git config --global user.name CI && git config --global user.email ci@example.com
+      - run: tests/run-tests.sh
