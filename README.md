@@ -27,7 +27,7 @@ pip install -r requirements.txt     # pyyaml, coverage
 ./pipectl list
 ```
 
-Python 3.8 ou plus et Git suffisent. Sous Windows, remplacez `./pipectl` par `python engine/pipectl.py` (ou utilisez WSL / Git Bash).
+Python 3.10 ou plus et Git suffisent. Sous Windows, remplacez `./pipectl` par `python engine/pipectl.py` (ou utilisez WSL / Git Bash).
 
 ## Utilisation
 
