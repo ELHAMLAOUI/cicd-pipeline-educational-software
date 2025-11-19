@@ -215,16 +215,16 @@ L'étudiant crée son archive de rendu, qui contient tous ses labs avec leur his
 
 ```bash
 $ ./pipectl pack
-Rendu créé : rendu-2026-11-19.zip (à déposer sur la plateforme du cours)
+Rendu créé : rendu-2025-11-19.zip (à déposer sur la plateforme du cours)
 ```
 
 L'enseignant la note sur son propre poste :
 
 ```bash
-$ ./pipectl grade rendu-2026-11-19.zip
+$ ./pipectl grade rendu-2025-11-19.zip
 ...
 Lab 06 réussi : 15/15 points — note 20.0/20
-Rapport global : 90/90 points — note 20.0/20 (notes-rendu-2026-11-19/rapport.csv)
+Rapport global : 90/90 points — note 20.0/20 (notes-rendu-2025-11-19/rapport.csv)
 ```
 
 Le fichier `rapport.csv` s'ouvre dans un tableur (une ligne par lab, avec le total). Le détail de chaque vérification est enregistré dans `labNN.json`.
